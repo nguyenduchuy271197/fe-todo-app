@@ -1,0 +1,78 @@
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.app-container {
+  padding: 2rem 0;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+}
+
+.app-body {
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+
+#todo-list.only-done .todo-item:not(.checked) {
+  display: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.todo-label {
+  flex-grow: 1;
+}
+
+.todo-btn-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--bs-success-border-subtle);
+}
+
+.check-icon {
+  display: none;
+}
+
+.todo-item.checked .todo-btn-check {
+  background-color: var(--bs-success);
+  color: var(--bs-body-bg);
+}
+
+.todo-item.checked .check-icon {
+  display: block;
+}
+
+.todo-item.checked .todo-label {
+  text-decoration: line-through;
+}
